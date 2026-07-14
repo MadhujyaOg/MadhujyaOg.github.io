@@ -4,22 +4,17 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: ",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+  apiKey: "demo",
+  authDomain: "demo",
+  projectId: "demo",
+  storageBucket: "demo",
+  messagingSenderId: "demo",
+  appId: "demo"
 };
 
-// Init Firebase
 const app = initializeApp(firebaseConfig);
-
-// Auth
 export const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+export const provider = new GoogleAuthProvider();
 export const loginWithGoogle = () => signInWithPopup(auth, provider);
 export const logout = () => signOut(auth);
-
-// Firestore
 export const db = getFirestore(app);

@@ -24,18 +24,18 @@ const Navbar = ({ hidden = false }) => {
 
       {/* Menu */}
       <ul
-        className={`flex items-center sm:gap-10 gap-4 
+        className={`flex items-center sm:gap-10 gap-3 
           md:static fixed left-1/2 -translate-x-1/2 md:translate-x-0 
           md:opacity-100 bg-white/10 backdrop-blur-md 
           md:bg-transparent md:backdrop-blur-none
-          p-4 rounded-br-2xl rounded-bl-2xl 
-          transition-all md:transition-none
-          ${active ? "top-0 opacity-100" : "-top-10 opacity-0"}`}
+          px-5 py-3 md:p-4 rounded-2xl md:rounded-none
+          transition-all duration-300 md:transition-none
+          ${active ? "top-3 opacity-100" : "-top-20 opacity-0"}`}
       >
-        <li><a href="#home" className="sm:text-lg text-base font-medium">Home</a></li>
-        <li><a href="#about" className="sm:text-lg text-base font-medium">About</a></li>
-        <li><a href="#project" className="sm:text-lg text-base font-medium">Project</a></li>
-        <li><a href="#contact" className="sm:text-lg text-base font-medium">Contact</a></li>
+        <li><a href="#home" className="text-sm sm:text-lg font-medium whitespace-nowrap">Home</a></li>
+        <li><a href="#about" className="text-sm sm:text-lg font-medium whitespace-nowrap">About</a></li>
+        <li><a href="#project" className="text-sm sm:text-lg font-medium whitespace-nowrap">Project</a></li>
+        <li><a href="#contact" className="text-sm sm:text-lg font-medium whitespace-nowrap">Contact</a></li>
       </ul>
     </nav>
   );
